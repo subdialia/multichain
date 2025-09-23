@@ -7,7 +7,7 @@ import (
 	"testing/quick"
 
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/chain/kava"
+	"github.com/subdialia/multichain/chain/kava"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"

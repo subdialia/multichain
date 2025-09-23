@@ -11,9 +11,9 @@ import (
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/renproject/id"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/address"
-	"github.com/renprotocol/multichain/api/utxo"
-	"github.com/renprotocol/multichain/chain/bitcoincash"
+	"github.com/subdialia/multichain/api/address"
+	"github.com/subdialia/multichain/api/utxo"
+	"github.com/subdialia/multichain/chain/bitcoincash"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -5,7 +5,7 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/renprotocol/multichain/chain/digibyte"
+	"github.com/subdialia/multichain/chain/digibyte"
 )
 
 func main() {

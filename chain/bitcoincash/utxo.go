@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/btcsuite/btcd/chaincfg"
@@ -11,8 +12,8 @@ import (
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/utxo"
-	"github.com/renprotocol/multichain/chain/bitcoin"
+	"github.com/subdialia/multichain/api/utxo"
+	"github.com/subdialia/multichain/chain/bitcoin"
 )
 
 // SighashForkID used to distinguish between Bitcoin Cash and Bitcoin

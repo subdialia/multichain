@@ -1,9 +1,9 @@
 package dogecoin_test
 
 import (
-	"github.com/renprotocol/multichain"
-	"github.com/renprotocol/multichain/chain/bitcoin"
-	"github.com/renprotocol/multichain/chain/dogecoin"
+	"github.com/subdialia/multichain"
+	"github.com/subdialia/multichain/chain/bitcoin"
+	"github.com/subdialia/multichain/chain/dogecoin"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -2,10 +2,11 @@ package bitcoin
 
 import (
 	"fmt"
+
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/btcutil/base58"
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/renprotocol/multichain/api/address"
+	"github.com/subdialia/multichain/api/address"
 )
 
 // AddressEncodeDecoder implements the address.EncodeDecoder interface

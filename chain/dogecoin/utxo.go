@@ -1,6 +1,6 @@
 package dogecoin
 
-import "github.com/renprotocol/multichain/chain/bitcoin"
+import "github.com/subdialia/multichain/chain/bitcoin"
 
 type (
 	// Tx re-exports bitcoin.Tx.

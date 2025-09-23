@@ -6,7 +6,7 @@ import (
 	"math"
 	"testing/quick"
 
-	"github.com/renprotocol/multichain/chain/ethereum"
+	"github.com/subdialia/multichain/chain/ethereum"
 
 	"github.com/renproject/pack"
 

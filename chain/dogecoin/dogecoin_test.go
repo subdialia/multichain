@@ -10,9 +10,9 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/renproject/id"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/address"
-	"github.com/renprotocol/multichain/api/utxo"
-	"github.com/renprotocol/multichain/chain/dogecoin"
+	"github.com/subdialia/multichain/api/address"
+	"github.com/subdialia/multichain/api/utxo"
+	"github.com/subdialia/multichain/chain/dogecoin"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

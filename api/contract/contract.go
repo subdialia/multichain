@@ -7,7 +7,7 @@ import (
 	"context"
 
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/address"
+	"github.com/subdialia/multichain/api/address"
 )
 
 // CallData is used to specify a function and its parameters when invoking

@@ -8,8 +8,8 @@ import (
 
 	"github.com/renproject/id"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/address"
-	"github.com/renprotocol/multichain/api/contract"
+	"github.com/subdialia/multichain/api/address"
+	"github.com/subdialia/multichain/api/contract"
 )
 
 // The Tx interfaces defines the functionality that must be exposed by

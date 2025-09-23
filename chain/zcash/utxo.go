@@ -4,18 +4,19 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
-	blake2 "github.com/dchest/blake2b"
 	"io"
 	"math"
+
+	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
+	blake2 "github.com/dchest/blake2b"
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/utxo"
-	"github.com/renprotocol/multichain/chain/bitcoin"
+	"github.com/subdialia/multichain/api/utxo"
+	"github.com/subdialia/multichain/chain/bitcoin"
 )
 
 // Version of Zcash transactions supported by the multichain.

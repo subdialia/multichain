@@ -6,7 +6,7 @@ import (
 	"testing/quick"
 
 	"github.com/renproject/surge"
-	"github.com/renprotocol/multichain/chain/ethereum"
+	"github.com/subdialia/multichain/chain/ethereum"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

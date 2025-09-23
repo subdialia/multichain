@@ -9,9 +9,9 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/renproject/id"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/account"
-	"github.com/renprotocol/multichain/api/address"
-	"github.com/renprotocol/multichain/api/contract"
+	"github.com/subdialia/multichain/api/account"
+	"github.com/subdialia/multichain/api/address"
+	"github.com/subdialia/multichain/api/contract"
 )
 
 // TxBuilder represents a transaction builder that builds transactions to be

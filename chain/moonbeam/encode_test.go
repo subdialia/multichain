@@ -7,7 +7,7 @@ import (
 	"testing/quick"
 
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/chain/moonbeam"
+	"github.com/subdialia/multichain/chain/moonbeam"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"

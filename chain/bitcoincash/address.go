@@ -10,7 +10,7 @@ import (
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/address"
+	"github.com/subdialia/multichain/api/address"
 	"golang.org/x/crypto/ripemd160"
 )
 

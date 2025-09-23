@@ -1,7 +1,7 @@
 package fantom
 
 import (
-	"github.com/renprotocol/multichain/chain/evm"
+	"github.com/subdialia/multichain/chain/evm"
 )
 
 // Payload re-exports evm.Payload.

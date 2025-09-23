@@ -2,8 +2,8 @@ package bitcoin_test
 
 import (
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/renprotocol/multichain/api/address"
-	"github.com/renprotocol/multichain/chain/bitcoin"
+	"github.com/subdialia/multichain/api/address"
+	"github.com/subdialia/multichain/chain/bitcoin"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -4,11 +4,11 @@ package multichain
 
 import (
 	"github.com/renproject/surge"
-	"github.com/renprotocol/multichain/api/account"
-	"github.com/renprotocol/multichain/api/address"
-	"github.com/renprotocol/multichain/api/contract"
-	"github.com/renprotocol/multichain/api/gas"
-	"github.com/renprotocol/multichain/api/utxo"
+	"github.com/subdialia/multichain/api/account"
+	"github.com/subdialia/multichain/api/address"
+	"github.com/subdialia/multichain/api/contract"
+	"github.com/subdialia/multichain/api/gas"
+	"github.com/subdialia/multichain/api/utxo"
 )
 
 type (

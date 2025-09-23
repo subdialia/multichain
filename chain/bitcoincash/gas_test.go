@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/chain/bitcoincash"
+	"github.com/subdialia/multichain/chain/bitcoincash"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

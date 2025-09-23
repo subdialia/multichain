@@ -9,7 +9,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/renproject/pack"
 	"github.com/renproject/surge"
-	"github.com/renprotocol/multichain/api/address"
+	"github.com/subdialia/multichain/api/address"
 )
 
 // AddressEncodeDecoder implements the address.EncodeDecoder interface

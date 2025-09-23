@@ -1,6 +1,6 @@
 package digibyte
 
-import "github.com/renprotocol/multichain/chain/bitcoin"
+import "github.com/subdialia/multichain/chain/bitcoin"
 
 // GasEstimator re-exports bitcoin.GasEstimator.
 type GasEstimator = bitcoin.GasEstimator

@@ -7,7 +7,7 @@ import (
 	"context"
 
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/address"
+	"github.com/subdialia/multichain/api/address"
 )
 
 // An Outpoint identifies a specific output produced by a transaction.
