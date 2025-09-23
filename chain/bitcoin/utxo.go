@@ -39,7 +39,7 @@ func NewTxBuilder(params *chaincfg.Params) TxBuilder {
 // function. Outputs produced for recipients will use P2PKH, P2SH, P2WPKH, or
 // P2WSH scripts as the pubkey script, based on the format of the recipient
 // address.
-func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipient) (utxo.Tx, error) {
+func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipient, locktime *uint32) (utxo.Tx, error) {
 	msgTx := wire.NewMsgTx(Version)
 
 	// Inputs
@@ -70,6 +70,11 @@ func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipi
 		msgTx.AddTxOut(wire.NewTxOut(value, script))
 	}
 
+	if locktime != nil {
+		msgTx.LockTime = *locktime
+	}
+
+	// Return the transaction.
 	return &Tx{inputs: inputs, recipients: recipients, msgTx: msgTx, signed: false}, nil
 }
 
@@ -224,11 +229,6 @@ func (tx *Tx) Sign(signatures []pack.Bytes65, pubKey pack.Bytes) error {
 
 	tx.signed = true
 	return nil
-}
-
-// SetLockTime sets the locktime of the underlying transaction.
-func (tx *Tx) SetLockTime(lockTime uint32) {
-	tx.msgTx.LockTime = lockTime
 }
 
 // Serialize serializes the UTXO transaction to bytes
