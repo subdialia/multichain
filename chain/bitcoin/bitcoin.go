@@ -16,8 +16,8 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/address"
-	"github.com/renprotocol/multichain/api/utxo"
+	"github.com/subdialia/multichain/api/address"
+	"github.com/subdialia/multichain/api/utxo"
 )
 
 const (

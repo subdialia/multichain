@@ -12,7 +12,7 @@ import (
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
 	"github.com/renproject/pack"
-	"github.com/renprotocol/multichain/api/utxo"
+	"github.com/subdialia/multichain/api/utxo"
 )
 
 // Version of Bitcoin transactions supported by the multichain.
