@@ -70,7 +70,7 @@ var _ = Describe("Bitcoin Cash", func() {
 						Value: pack.NewU256FromU64(pack.NewU64((output.Value.Int().Uint64() - 1000) / 2)),
 					},
 				}
-				tx, err := bitcoincash.NewTxBuilder(&chaincfg.RegressionNetParams).BuildTx(inputs, recipients, nil)
+				tx, err := bitcoincash.NewTxBuilder(&chaincfg.RegressionNetParams).BuildTx(inputs, recipients)
 				Expect(err).ToNot(HaveOccurred())
 
 				// Get the digests that need signing from the transaction, and

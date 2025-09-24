@@ -66,7 +66,7 @@ func NewTxBuilder(params *Params, expiryHeight uint32) utxo.TxBuilder {
 //
 // Outputs produced for recipients will use P2PKH, or P2SH scripts as the pubkey
 // script, based on the format of the recipient address.
-func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipient, locktime *uint32) (utxo.Tx, error) {
+func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipient) (utxo.Tx, error) {
 	msgTx := wire.NewMsgTx(Version)
 
 	// Address encoder-decoder
@@ -315,6 +315,11 @@ func (tx *Tx) Serialize() (pack.Bytes, error) {
 	}
 
 	return pack.NewBytes(w.Bytes()), nil
+}
+
+// SetLockTime sets the locktime for the transaction.
+func (tx *Tx) SetLockTime(locktime uint32) {
+	tx.msgTx.LockTime = locktime
 }
 
 func calculateSighash(

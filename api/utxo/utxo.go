@@ -67,6 +67,12 @@ type Tx interface {
 	// Serialize the transaction into bytes. This is the format in which the
 	// transaction will be submitted by the client.
 	Serialize() (pack.Bytes, error)
+
+	// SetLockTime sets the locktime for the transaction.
+	// If the locktime is non-zero and less than 500 million, it is
+	// interpreted as a block number. Otherwise, it is interpreted as a
+	// Unix timestamp.
+	SetLockTime(uint32)
 }
 
 // The TxBuilder interface defines the functionality required to build
@@ -74,7 +80,7 @@ type Tx interface {
 // information, and this should be accepted during the construction of the
 // chain-specific transaction builder.
 type TxBuilder interface {
-	BuildTx([]Input, []Recipient, *uint32) (Tx, error)
+	BuildTx([]Input, []Recipient) (Tx, error)
 }
 
 // The Client interface defines the functionality required to interact with a
