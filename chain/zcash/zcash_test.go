@@ -69,7 +69,7 @@ var _ = Describe("Zcash", func() {
 						Value: pack.NewU256FromU64(pack.NewU64((output.Value.Int().Uint64() - 1000) / 2)),
 					},
 				}
-				tx, err := zcash.NewTxBuilder(&zcash.RegressionNetParams, 1000000).BuildTx(inputs, recipients)
+				tx, err := zcash.NewTxBuilder(&zcash.RegressionNetParams, 1000000).BuildTx(inputs, recipients, nil)
 				Expect(err).ToNot(HaveOccurred())
 
 				// Get the digests that need signing from the transaction, and

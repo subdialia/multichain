@@ -69,7 +69,7 @@ var _ = Describe("Dogecoin", func() {
 						Value: pack.NewU256FromU64(pack.NewU64((output.Value.Int().Uint64() - 1000) / 2)),
 					},
 				}
-				tx, err := dogecoin.NewTxBuilder(&dogecoin.RegressionNetParams).BuildTx(inputs, recipients)
+				tx, err := dogecoin.NewTxBuilder(&dogecoin.RegressionNetParams).BuildTx(inputs, recipients, nil)
 				Expect(err).ToNot(HaveOccurred())
 
 				// Get the digests that need signing from the transaction, and

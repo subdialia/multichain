@@ -976,7 +976,7 @@ var _ = Describe("Multichain", func() {
 							Value: utxoValue2,
 						},
 					}
-					utxoTx, err := utxoChain.txBuilder.BuildTx(inputs, recipients)
+					utxoTx, err := utxoChain.txBuilder.BuildTx(inputs, recipients, nil)
 					Expect(err).NotTo(HaveOccurred())
 
 					// Get the sighashes that need to be signed, and sign them.
@@ -1046,7 +1046,7 @@ var _ = Describe("Multichain", func() {
 						To:    multichain.Address(pkhAddr.EncodeAddress()),
 						Value: output4.Value.Sub(pack.NewU256FromU64(pack.U64(500))),
 					}}
-					utxoTx2, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2)
+					utxoTx2, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2, nil)
 					Expect(err).NotTo(HaveOccurred())
 					sighashes2, err := utxoTx2.Sighashes()
 					signatures2 := make([]pack.Bytes65, len(sighashes2))
@@ -1064,7 +1064,7 @@ var _ = Describe("Multichain", func() {
 
 					// Try to spend UTXO from valid key. We should be able to successfully
 					// submit the signed UTXO to the network.
-					utxoTx3, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2)
+					utxoTx3, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2, nil)
 					Expect(err).NotTo(HaveOccurred())
 					sighashes3, err := utxoTx3.Sighashes()
 					signatures3 := make([]pack.Bytes65, len(sighashes3))
@@ -1135,7 +1135,7 @@ var _ = Describe("Multichain", func() {
 							Value: output.Value.Sub(pack.NewU256FromU64(pack.U64(500))),
 						},
 					}
-					utxoTx, err := utxoChain.txBuilder.BuildTx(inputs, recipients)
+					utxoTx, err := utxoChain.txBuilder.BuildTx(inputs, recipients, nil)
 					Expect(err).NotTo(HaveOccurred())
 
 					// Get the sighashes that need to be signed, and sign them.
@@ -1192,13 +1192,13 @@ var _ = Describe("Multichain", func() {
 						To:    multichain.Address(pkhAddr.EncodeAddress()),
 						Value: output2.Value.Sub(pack.NewU256FromU64(pack.U64(500))),
 					}}
-					utxoTx2, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2)
+					utxoTx2, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2, nil)
 					Expect(err).NotTo(HaveOccurred())
 
 					// Create another transaction using the same inputs, which we will
 					// sign with the original user's address. Validate that none other
 					// than the recipient's signature can spend this UTXO.
-					utxoTx3, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2)
+					utxoTx3, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2, nil)
 					Expect(err).NotTo(HaveOccurred())
 
 					// Get the sighashes that need to be signed, and sign them.
@@ -1306,7 +1306,7 @@ var _ = Describe("Multichain", func() {
 							Value: output.Value.Sub(pack.NewU256FromU64(pack.U64(500))),
 						},
 					}
-					utxoTx, err := utxoChain.txBuilder.BuildTx(inputs, recipients)
+					utxoTx, err := utxoChain.txBuilder.BuildTx(inputs, recipients, nil)
 					Expect(err).NotTo(HaveOccurred())
 
 					// Get the sighashes that need to be signed, and sign them.
@@ -1360,13 +1360,13 @@ var _ = Describe("Multichain", func() {
 						To:    multichain.Address(pkhAddr.EncodeAddress()),
 						Value: output2.Value.Sub(pack.NewU256FromU64(pack.U64(500))),
 					}}
-					utxoTx2, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2)
+					utxoTx2, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2, nil)
 					Expect(err).NotTo(HaveOccurred())
 
 					// Create another transaction using the same inputs, which we will
 					// sign with the original user's address. Validate that none other
 					// than the recipient's signature can spend this UTXO.
-					utxoTx3, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2)
+					utxoTx3, err := utxoChain.txBuilder.BuildTx(inputs2, recipients2, nil)
 					Expect(err).NotTo(HaveOccurred())
 
 					// Get the sighashes that need to be signed, and sign them.

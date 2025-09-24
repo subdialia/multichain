@@ -70,8 +70,11 @@ func NewTxBuilder(params *chaincfg.Params) utxo.TxBuilder {
 //
 // Outputs produced for recipients will use P2PKH, or P2SH scripts as the pubkey
 // script, based on the format of the recipient address.
-func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipient) (utxo.Tx, error) {
+func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipient, locktime *uint32) (utxo.Tx, error) {
 	msgTx := wire.NewMsgTx(Version)
+	if locktime != nil {
+		msgTx.LockTime = *locktime
+	}
 
 	// Address encoder-decoder
 	addrEncodeDecoder := NewAddressEncodeDecoder(txBuilder.params)

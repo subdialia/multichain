@@ -74,7 +74,7 @@ type Tx interface {
 // information, and this should be accepted during the construction of the
 // chain-specific transaction builder.
 type TxBuilder interface {
-	BuildTx([]Input, []Recipient) (Tx, error)
+	BuildTx([]Input, []Recipient, *uint32) (Tx, error)
 }
 
 // The Client interface defines the functionality required to interact with a
