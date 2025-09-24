@@ -72,9 +72,6 @@ func NewTxBuilder(params *chaincfg.Params) utxo.TxBuilder {
 // script, based on the format of the recipient address.
 func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipient, locktime *uint32) (utxo.Tx, error) {
 	msgTx := wire.NewMsgTx(Version)
-	if locktime != nil {
-		msgTx.LockTime = *locktime
-	}
 
 	// Address encoder-decoder
 	addrEncodeDecoder := NewAddressEncodeDecoder(txBuilder.params)
@@ -106,6 +103,10 @@ func (txBuilder TxBuilder) BuildTx(inputs []utxo.Input, recipients []utxo.Recipi
 			return nil, fmt.Errorf("expected value >= 0, got value = %v", value)
 		}
 		msgTx.AddTxOut(wire.NewTxOut(value, script))
+	}
+
+	if locktime != nil {
+		msgTx.LockTime = *locktime
 	}
 
 	return &Tx{inputs: inputs, recipients: recipients, msgTx: msgTx, signed: false}, nil
